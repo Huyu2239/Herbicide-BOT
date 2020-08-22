@@ -21,4 +21,4 @@ class MyBot(commands.Bot):
 
 if __name__ == '__main__':
     bot = MyBot(command_prefix='!') 
-    bot.run('NzQ2MDI2NTcxOTg2MzcwNjkx.Xz6VYw.sXheYu-xiTUG0xkhohiqVvopQRI') 
+    bot.run() 
