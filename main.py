@@ -1,4 +1,8 @@
 from discord.ext import commands
+import os
+import traceback
+from dotenv import load_dotenv
+load_dotenv()
 
 INITIAL_EXTENSIONS = [
     "cogs.除草"
@@ -20,5 +24,5 @@ class MyBot(commands.Bot):
         print('-----')
 
 if __name__ == '__main__':
-    bot = MyBot(command_prefix='!') 
-    bot.run() 
+    bot = MyBot(command_prefix='草! ') 
+    bot.run(os.environ['TOKEN'])
