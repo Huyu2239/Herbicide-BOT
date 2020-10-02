@@ -1,4 +1,5 @@
 from discord.ext import commands
+import discord
 import os
 import traceback
 from dotenv import load_dotenv
@@ -21,7 +22,7 @@ class MyBot(commands.Bot):
     async def on_ready(self):
         await self.change_presence(
             activity=discord.Game(
-                name=f"{self.prefix}help | {len(self.guilds)}guilds"
+                name=f"ku!help | {len(self.guilds)}guilds"
             )
         )
         print('-----')
