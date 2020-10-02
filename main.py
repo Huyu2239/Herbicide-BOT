@@ -19,10 +19,15 @@ class MyBot(commands.Bot):
                 traceback.print_exc()
 
     async def on_ready(self):
+        await self.change_presence(
+            activity=discord.Game(
+                name=f"{self.prefix}help | {len(self.guilds)}guilds"
+            )
+        )
         print('-----')
         print('起動')
         print('-----')
 
 if __name__ == '__main__':
-    bot = MyBot(command_prefix='草! ') 
+    bot = MyBot(command_prefix='ku!') 
     bot.run(os.environ['TOKEN'])
