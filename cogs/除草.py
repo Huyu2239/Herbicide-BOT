@@ -76,7 +76,7 @@ class Grass(commands.Cog):
         if message.author.bot: return
         msg = ''.join(random.choice(word_list,))
         for grass in grass_list:
-            if grass in message.content:
+            if grass in message.content and 'http' not in message.content:
                 await message.channel.send(msg)
                 break
         return
